@@ -1,0 +1,5 @@
+find command
+===============
+1. find / -name foo
+2. find /tmp /var/tmp . $HOME -name foo
+3. find . -name foo\*bar
