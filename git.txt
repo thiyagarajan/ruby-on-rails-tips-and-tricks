@@ -1,0 +1,9 @@
+Setting user name and email globally in git
+============================================
+$ git config --global user.name "your good name"
+$ git config --global user.email "your email here"
+
+Setting user name and email in individual project
+=================================================
+$ git config user.name "your good name"
+$ git config user.email "your email here"
