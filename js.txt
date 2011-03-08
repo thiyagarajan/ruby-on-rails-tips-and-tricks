@@ -1,1 +1,7 @@
-soon
+Cache your objects!
+===============
+<script type="text/javascript">
+var theimages=document.images
+for (i=0;i<theimages.length;i++)
+theimages[i].src="blank.gif"
+</script>
