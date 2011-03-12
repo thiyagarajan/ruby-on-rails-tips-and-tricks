@@ -38,3 +38,8 @@ end
 
 number_to_ordinal(12) => "12th"
 number_to_ordinal(7) => "7th"
+
+uninitialized constant UsersController
+============================
+Add following line into routes
+map.resources :users, :controller => 'user'
