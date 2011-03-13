@@ -43,3 +43,27 @@ uninitialized constant UsersController
 ============================
 Add following line into routes
 map.resources :users, :controller => 'user'
+
+simple form submission
+==================
+<% form_for @users do |f|  %>
+<%= f.text_field :name %><br/>
+<%=  f.text_field :email %><br/>
+<%= f.text_field :country %><br/>
+<%= f.submit 'save' %>
+<% end %>
+
+simple create method
+================
+def new
+    @users = User.new
+  end
+
+  def create
+    @users = User.new(params[:user])
+    #render :text => params.inspect and return
+    if @users.save
+      redirect_to root_path
+      flash[:notice]="saved successfully"
+    end
+  end
