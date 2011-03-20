@@ -67,3 +67,30 @@ def new
       flash[:notice]="saved successfully"
     end
   end
+
+render
+==========
+render :action => "action"
+render :action => "action", :layout => "layoutname"
+render :file => "filepath"
+render :file => "filepath", :use_full_path => false
+render :inline => "<%= 'hello' %>"
+render :inline => "<%= 'hello' %>", :locals => { :name => "value" }
+render :inline => "<%= 'hello' %>", :type => :rxml
+render :layout => "layoutname"
+render :nothing => true
+render :nothing => true, :status => 401
+render :partial => "item"
+render :partial => "item", :collection => items
+render :partial => "item", :locals => { :name => "value" }
+render :partial => "item", :object => object
+render :partial => "item", :status => 500
+render :text => "text to render..."
+render :text => "text to render...", :layout => "layoutname"
+render :text => "text to render...", :layout => true
+render :text => "text to render...", :status => 401
+render_component :action => "index"
+render_component :controller => "items"
+render_component :controller => "items", :action => "index"
+verify :only => [:], :method => :post, :render => {:status => 500, :text => "use HTTP-POST"}
+verify :only => [:], :session => :user, :params => :id, :redirect_to => {:action => 'index'}
