@@ -160,3 +160,12 @@ app\helpers\admin\master_helper.rb
     end
 
   end
+
+How to change reCAPTCHA theme
+===========================
+
+ <script type="text/javascript">
+ var RecaptchaOptions = {
+    theme : '<theme name here>'
+ };
+ </script>
