@@ -198,5 +198,8 @@ then action should be like,
 
 Now image will upload without page refresh.
 
-
-
+How do I handle date objects in ruby on rails forms?
+=======================================
+<%= date_select("show", "date", :default => Date.today, 
+    :order => [:month, :day, :year], :start_year => Date.today.year, 
+    :end_year => Date.today.year + 3) %>
