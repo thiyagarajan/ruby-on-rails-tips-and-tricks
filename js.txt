@@ -5,3 +5,11 @@ var theimages=document.images
 for (i=0;i<theimages.length;i++)
 theimages[i].src="blank.gif"
 </script>
+
+document.ready
+============
+This is jQuery’s equivalent of window.onload.
+
+$(document).ready(function(){
+    // Your code here
+}); 
