@@ -224,3 +224,11 @@ end
 $ gem install rubygems-update -v='1.4.2'
 $ gem uninstall rubygems-update -v='1.5.0'
 $ update_rubygems
+
+rails3 mysql2 adapter error: 'gem install activerecord-mysql2-adapter'
+==================================================================
+In GemFile minor change
+
+gem 'mysql2' to gem 'mysql2', '< 0.3'
+
+and bundle install it.
