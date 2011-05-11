@@ -218,3 +218,9 @@ end
 end
 end
 end
+
+[or]
+
+$ gem install rubygems-update -v='1.4.2'
+$ gem uninstall rubygems-update -v='1.5.0'
+$ update_rubygems
