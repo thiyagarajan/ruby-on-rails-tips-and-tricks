@@ -3,3 +3,37 @@ find command
 1. find / -name foo
 2. find /tmp /var/tmp . $HOME -name foo
 3. find . -name foo\*bar
+
+Show all installed packages or software in Linux
+==================================================
+
+Red Hat/Fedora Core/CentOS Linux
+
+Type the following command to get list of all installed software
+# rpm -qa | less
+
+Debian Linux
+
+Type the following command to get list of all installed software:
+# dpkg --get-selections
+
+Ubuntu Linux
+
+Type the following command to get list of all installed software:
+# sudo dpkg --get-selections
+
+FreeBSD
+
+Type the following command to get list of all installed software:
+# pkg_info | less
+# pkg_info apache
+
+Use pkg_version command to summarizes the versions of all installed packages:
+# pkg_version | less
+# pkg_version | grep 'lsof'
+
+OpenBSD
+
+OpenBSD also use pkg_info command to display list of all installed packages or software:
+# pkg_info | less
+# pkg_info apache
