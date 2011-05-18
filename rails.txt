@@ -232,3 +232,14 @@ In GemFile minor change
 gem 'mysql2' to gem 'mysql2', '< 0.3'
 
 and bundle install it.
+
+created_at and created_on
+=========================
+
+created_at
+
+created_at and updated_at are dates and times
+
+created_on
+
+created_on and updated_on are dates only
