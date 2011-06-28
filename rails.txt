@@ -243,3 +243,35 @@ created_at and updated_at are dates and times
 created_on
 
 created_on and updated_on are dates only
+
+Rails, rendering partial via JS on after page load
+===================================================
+show.html.erb
+
+<div id="weather"></div>
+weather.js.erb
+
+$( "#weather" ).html( "<%= escape_javascript(render( :partial => 'weather' )) %>");
+weather.html.erb
+
+<%= Time.now %> # For brevity. This actually does more.
+Controller
+
+def weather
+
+  slow_api_request
+
+  respond_to do |format|
+    format.js {render :layout => false}
+  end
+end
+
+You should simply add an ajax call. Assuming you're using jQuery, just add this kind of scripts in your view:
+
+$.ajax({
+  type: "GET",
+  url: "<%= url_for your_path %>" ,
+  success: function(data){
+    //if ever there is something more to do (there is also an error handler)
+  }
+});
