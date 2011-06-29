@@ -41,3 +41,10 @@ OpenBSD also use pkg_info command to display list of all installed packages or s
 Web cpanel
 ==========
 http://www.webmin.com/
+
+Undefined symbol: xsltLibxmlVersion - Ruby XSLT and CentOS
+===========================================================
+yum reinstall -y libxml2 libxml2-devel libxslt libxslt-devel
+ldconfig
+gem uninstall libxml-ruby ruby-xslt
+gem install libxml-ruby ruby-xslt
