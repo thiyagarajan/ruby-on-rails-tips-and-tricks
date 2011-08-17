@@ -48,3 +48,17 @@ yum reinstall -y libxml2 libxml2-devel libxslt libxslt-devel
 ldconfig
 gem uninstall libxml-ruby ruby-xslt
 gem install libxml-ruby ruby-xslt
+
+Install MongoD
+==============
+Import GPG Key:
+
+$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+add this line to your /etc/apt/sources.list
+
+deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
+and run:
+
+$ sudo apt-get update
+$ sudo apt-get install mongodb-10gen
+$ sudo gem install mongo bson bson_ext
